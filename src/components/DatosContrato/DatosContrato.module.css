@@ -1,9 +1,9 @@
 .glassContainer {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 25px;
+  padding: 20px;
   color: white;
   height: 100%;
   overflow-y: auto;
@@ -13,42 +13,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .contratoNumber {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #ff4444;
   text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
 }
 
 .solicitudNumber {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #cccccc;
 }
 
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .sectionTitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   color: #ffffff;
   border-left: 3px solid #02ABFF;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 .formGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 15px;
 }
 
 .formGroup {
@@ -61,18 +61,26 @@
 }
 
 .label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #cccccc;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .input {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 10px 12px;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  min-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #02ABFF;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .input::placeholder {
@@ -81,14 +89,15 @@
 
 .beneficiariosList {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 10px;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 8px;
 }
 
 .beneficiarioItem {
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
 }
 
 .beneficiarioItem:last-child {
@@ -98,25 +107,160 @@
 .notes {
   background: rgba(255, 0, 0, 0.1);
   border: 1px solid rgba(255, 0, 0, 0.3);
-  border-radius: 8px;
-  padding: 12px;
-  margin-top: 20px;
-  font-size: 0.85rem;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+/* ===== RESPONSIVE COMPACTO ===== */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .glassContainer {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .header {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .contratoNumber {
+    font-size: 1.8rem;
+  }
+  
+  .solicitudNumber {
+    font-size: 1.4rem;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .input {
+    padding: 12px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+  
+  .section {
+    margin-bottom: 15px;
+  }
+}
+
+/* Móviles (≤ 767px) */
+@media (max-width: 767px) {
+  .glassContainer {
+    padding: 12px;
+    border-radius: 10px;
+    margin: 0;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .contratoNumber {
+    font-size: 1.6rem;
+  }
+  
+  .solicitudNumber {
+    font-size: 1.2rem;
+  }
+  
+  .section {
+    margin-bottom: 12px;
+  }
+  
+  .sectionTitle {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    padding-left: 6px;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .input {
+    padding: 12px 10px;
+    font-size: 16px;
+    min-height: 42px;
+    border-radius: 6px;
+  }
+  
+  .label {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+  
+  .beneficiariosList {
+    padding: 10px;
+    margin-top: 6px;
+  }
+  
+  .beneficiarioItem {
+    padding: 6px 0;
+    font-size: 0.8rem;
+  }
+  
+  .notes {
+    padding: 8px;
+    margin-top: 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Móviles pequeños (≤ 480px) */
+@media (max-width: 480px) {
+  .glassContainer {
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .contratoNumber {
+    font-size: 1.4rem;
+  }
+  
+  .solicitudNumber {
+    font-size: 1.1rem;
+  }
+  
+  .input {
+    padding: 10px 8px;
+    min-height: 40px;
+    font-size: 14px;
+  }
+  
+  .sectionTitle {
+    font-size: 0.85rem;
+  }
 }
 
 /* Scrollbar personalizado */
 .glassContainer::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .glassContainer::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .glassContainer::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .glassContainer::-webkit-scrollbar-thumb:hover {

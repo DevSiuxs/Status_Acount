@@ -1,9 +1,9 @@
 .glassContainer {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 25px;
+  padding: 20px;
   color: white;
   height: 100%;
   display: flex;
@@ -12,20 +12,24 @@
 
 .tabs {
   display: flex;
-  gap: 5px;
-  margin-bottom: 25px;
+  gap: 4px;
+  margin-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+  flex-wrap: wrap;
 }
 
 .tab {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px 8px 0 0;
-  padding: 8px 16px;
-  font-size: 0.85rem;
+  border-radius: 6px 6px 0 0;
+  padding: 8px 10px;
+  font-size: 0.75rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex: 1;
+  min-width: 70px;
+  text-align: center;
 }
 
 .tabActive {
@@ -40,31 +44,34 @@
 
 .pagosTable {
   flex: 1;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  overflow-x: auto;
 }
 
 .tableHeader {
   display: grid;
   grid-template-columns: 1fr 0.8fr 1fr 1.2fr 1fr 1fr;
-  gap: 10px;
-  padding: 12px 15px;
+  gap: 6px;
+  padding: 10px 8px;
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  font-size: 0.85rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+  min-width: 550px;
 }
 
 .tableRow {
   display: grid;
   grid-template-columns: 1fr 0.8fr 1fr 1.2fr 1fr 1fr;
-  gap: 10px;
-  padding: 10px 15px;
+  gap: 6px;
+  padding: 8px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  margin-bottom: 5px;
-  font-size: 0.85rem;
+  border-radius: 5px;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
   align-items: center;
+  min-width: 550px;
 }
 
 .tableRow:hover {
@@ -74,25 +81,25 @@
 .resumenPagos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .resumenItem {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 8px;
+  padding: 12px;
   text-align: center;
 }
 
 .resumenLabel {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #cccccc;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .resumenValue {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -118,22 +125,22 @@
 
 .datosAdicionales {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 8px;
+  padding: 12px;
   margin-top: auto;
 }
 
 .datosGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  font-size: 0.85rem;
+  gap: 6px;
+  font-size: 0.75rem;
 }
 
 .datoItem {
   display: flex;
   justify-content: space-between;
-  padding: 5px 0;
+  padding: 4px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -149,17 +156,176 @@
   background: #02ABFF;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 16px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 12px;
   width: 100%;
   transition: all 0.3s ease;
+  font-size: 0.9rem;
+  min-height: 44px;
 }
 
 .btnWord:hover {
   background: #0288d1;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(2, 171, 255, 0.4);
+}
+
+/* ===== RESPONSIVE COMPACTO ===== */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .glassContainer {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  .tabs {
+    gap: 3px;
+    margin-bottom: 15px;
+  }
+  
+  .tab {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    min-width: 60px;
+  }
+  
+  .resumenPagos {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .resumenItem {
+    padding: 10px;
+  }
+  
+  .resumenValue {
+    font-size: 0.9rem;
+  }
+  
+  .btnWord {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    min-height: 42px;
+  }
+}
+
+/* Móviles (≤ 767px) */
+@media (max-width: 767px) {
+  .glassContainer {
+    padding: 6px;
+    border-radius: 10px;
+    margin: auto auto;
+  }
+  
+  .tabs {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    gap: 2px;
+  }
+  
+  .tab {
+    padding: 8px 6px;
+    font-size: 0.65rem;
+    min-width: 50px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .pagosTable {
+    margin-bottom: 15px;
+  }
+  
+  .tableHeader,
+  .tableRow {
+    font-size: 0.7rem;
+    gap: 4px;
+    padding: 8px 6px;
+    min-width: 500px;
+  }
+  
+  .resumenPagos {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .resumenItem {
+    padding: 10px;
+  }
+  
+  .resumenLabel {
+    font-size: 0.75rem;
+  }
+  
+  .resumenValue {
+    font-size: 1.1rem;
+  }
+  
+  .datosAdicionales {
+    padding: 10px;
+  }
+  
+  .datosGrid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 0.7rem;
+  }
+  
+  .datoItem {
+    padding: 6px 0;
+  }
+  
+  .btnWord {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+    min-height: 40px;
+    border-radius: 6px;
+  }
+}
+
+/* Móviles pequeños (≤ 480px) */
+@media (max-width: 480px) {
+  .glassContainer {
+    padding: 10px;
+    border-radius: 8px;
+    width: 90vw;
+  }
+  
+  .tabs {
+    gap: 1px;
+  }
+  
+  .tab {
+    padding: 6px 4px;
+    font-size: 0.6rem;
+    min-width: 45px;
+  }
+  
+  .resumenValue {
+    font-size: 1rem;
+  }
+  
+  .btnWord {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    min-height: 38px;
+  }
+  
+  .tableHeader,
+  .tableRow {
+    min-width: 450px;
+    font-size: 0.65rem;
+  }
+}
+
+/* Scroll horizontal para tablas en móviles */
+@media (max-width: 767px) {
+  .pagosTable {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 3px;
+  }
 }
