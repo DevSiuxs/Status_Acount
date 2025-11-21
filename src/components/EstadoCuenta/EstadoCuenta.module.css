@@ -1,0 +1,165 @@
+.glassContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 15px;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px 8px 0 0;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabActive {
+  background: rgba(2, 171, 255, 0.3);
+  border-color: #02ABFF;
+  color: #02ABFF;
+}
+
+.tab:hover:not(.tabActive) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pagosTable {
+  flex: 1;
+  margin-bottom: 25px;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr 1.2fr 1fr 1fr;
+  gap: 10px;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr 1.2fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.tableRow:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.resumenPagos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.resumenItem {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.resumenLabel {
+  font-size: 0.8rem;
+  color: #cccccc;
+  margin-bottom: 5px;
+}
+
+.resumenValue {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.importePagar {
+  color: #ff4444;
+  text-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
+}
+
+.importePagado {
+  color: #4CAF50;
+  text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.saldoActual {
+  color: #ff4444;
+  text-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
+}
+
+.importeRecargos {
+  color: #FFF702;
+  text-shadow: 0 0 8px rgba(255, 247, 2, 0.5);
+}
+
+.datosAdicionales {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.datosGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.datoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.datoLabel {
+  color: #cccccc;
+}
+
+.datoValue {
+  font-weight: bold;
+}
+
+.btnWord {
+  background: #02ABFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btnWord:hover {
+  background: #0288d1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(2, 171, 255, 0.4);
+}
